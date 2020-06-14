@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="500.0" prefWidth="750.0" stylesheets="@style.css"
+						xmlns="http://javafx.com/javafx/11.0.1" fx:controller="view.Controller">
+	<children>
+		<SplitPane dividerPositions="0.4" orientation="VERTICAL" prefHeight="500.0" prefWidth="250.0" styleClass="server">
+			<items>
+				<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+					<children>
+						<Label layoutX="95.0" layoutY="7.0" text="InputClient"/>
+						<Button layoutX="176.0" layoutY="2.0" mnemonicParsing="false" onAction="#startInputClient"
+										text="StartClient"/>
+						<Button layoutX="175.0" layoutY="65.0" mnemonicParsing="false" onAction="#sendRequest" prefHeight="25.0"
+										prefWidth="60.0" text="Send"/>
+						<TextField fx:id="input_rowBeg" layoutX="14.0" layoutY="53.0" prefHeight="25.0" prefWidth="43.0"/>
+						<TextField fx:id="input_colBeg" layoutX="66.0" layoutY="53.0" prefHeight="25.0" prefWidth="43.0"/>
+						<TextField fx:id="input_rowEnd" layoutX="14.0" layoutY="109.0" prefHeight="25.0" prefWidth="43.0"/>
+						<TextField fx:id="input_colEnd" layoutX="66.0" layoutY="109.0" prefHeight="25.0" prefWidth="43.0"/>
+						<TextField fx:id="input_mLeft" layoutX="119.0" layoutY="53.0" prefHeight="25.0" prefWidth="43.0"/>
+						<TextField fx:id="input_mRight" layoutX="119.0" layoutY="109.0" prefHeight="25.0" prefWidth="43.0"/>
+						<Label layoutX="15.0" layoutY="36.0" text="rowBeg"/>
+						<Label layoutX="15.0" layoutY="89.0" text="rowEnd"/>
+						<Label layoutX="67.0" layoutY="36.0" text="colBeg"/>
+						<Label layoutX="67.0" layoutY="89.0" text="colEnd"/>
+						<Label layoutX="123.0" layoutY="36.0" text="mLeft"/>
+						<Label layoutX="123.0" layoutY="89.0" text="mRight"/>
+					</children>
+				</AnchorPane>
+				<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+					<children>
+						<TextArea fx:id="log_1" layoutX="-2.0" prefHeight="295.0" prefWidth="250.0" wrapText="true"/>
+					</children>
+				</AnchorPane>
+			</items>
+		</SplitPane>
+		<SplitPane dividerPositions="0.4" layoutX="250.0" orientation="VERTICAL" prefHeight="500.0" prefWidth="250.0"
+							 styleClass="server">
+			<items>
+				<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+					<children>
+						<Label layoutX="101.0" layoutY="6.0" text="CalcServer"/>
+						<Button layoutX="176.0" layoutY="2.0" mnemonicParsing="false" onAction="#startCalcClient"
+										text="StartClient"/>
+						<Button layoutX="6.0" layoutY="2.0" mnemonicParsing="false" onAction="#startCalcServer" text="StartServer"/>
+					</children>
+				</AnchorPane>
+				<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+					<children>
+						<TextArea fx:id="log_2" layoutX="-2.0" prefHeight="295.0" prefWidth="250.0" wrapText="true"/>
+					</children>
+				</AnchorPane>
+			</items>
+		</SplitPane>
+		<SplitPane dividerPositions="0.4" layoutX="500.0" orientation="VERTICAL" prefHeight="500.0" prefWidth="250.0"
+							 styleClass="server">
+			<items>
+				<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+					<children>
+						<Label layoutX="100.0" layoutY="6.0" text="DataServer"/>
+						<Button layoutX="6.0" layoutY="2.0" mnemonicParsing="false" onAction="#startDataServer" text="StartServer"/>
+					</children>
+				</AnchorPane>
+				<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+					<children>
+						<TextArea fx:id="log_3" layoutX="-2.0" prefHeight="295.0" prefWidth="250.0" wrapText="true"/>
+					</children>
+				</AnchorPane>
+			</items>
+		</SplitPane>
+	</children>
+</AnchorPane>

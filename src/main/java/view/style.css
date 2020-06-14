@@ -1,0 +1,13 @@
+.server {
+	-fx-border-style: solid;
+}
+
+.radio-on:selected .radio .dot {
+    -fx-background-color: green;
+    -fx-background-insets: 0;
+}
+
+.radio-off:selected .radio .dot {
+    -fx-background-color: red;
+    -fx-background-insets: 0;
+}
